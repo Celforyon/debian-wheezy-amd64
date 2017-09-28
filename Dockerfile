@@ -8,6 +8,6 @@ ENV CATCH_URL "https://github.com/philsquared/Catch/releases/download/v1.10.0/ca
 
 RUN  apt-get update \
 	&& apt-get install -y --no-install-recommends --no-install-suggests \
-		make cmake git catch gcc g++ curl \
+		make cmake git gcc g++ curl \
 	&& rm -rf /var/lib/apt/lists/*
 RUN curl>/usr/include/catch.hpp -L $CATCH_URL
